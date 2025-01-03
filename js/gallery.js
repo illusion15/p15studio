@@ -12,13 +12,18 @@ export function initGallery() {
 
     const galleryGrid = document.getElementById('gallery-grid');
 
+    if (!galleryGrid) {
+        console.error('Gallery grid element not found');
+        return;
+    }
+
     galleryImages.forEach(imageUrl => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
 
         const img = document.createElement('img');
         img.src = imageUrl;
-        img.alt = 'Gallery Image';
+        img.alt = imageUrl.split('/').pop().replace(/_/g, ' ').replace('.jpg', '');
 
         galleryItem.appendChild(img);
         galleryItem.addEventListener('click', () => openFullscreen(img));
@@ -27,13 +32,14 @@ export function initGallery() {
     });
 }
 
-
 function openFullscreen(element) {
     if (element.requestFullscreen) {
-        element.requestFullscreen();
-    } else if (element.webkitRequestFullscreen) { // Safari
+        element.requestFullscreen().catch(err => console.error(`Error attempting fullscreen: ${err.message}`));
+    } else if (element.webkitRequestFullscreen) {
         element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) { // IE11
+    } else if (element.msRequestFullscreen) {
         element.msRequestFullscreen();
+    } else {
+        console.warn('Fullscreen API is not supported in this browser.');
     }
 }
