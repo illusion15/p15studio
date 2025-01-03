@@ -1,13 +1,13 @@
 export function initGallery() {
     const galleryImages = [
-        'img/temple.jpg',
-        'img/garadiya_mahadev_view_point.jpg',
-        'img/garadiya_mahadev_view_point_2.jpg',
-        'img/garadiya_mahadev_view_point_3.jpg',
-        'img/garadiya_mahadev_view_point_4.jpg',
-        'img/sunrise_at_stadium.jpg',
-        'img/sunrise_behind_river.jpg',
-        'img/sunset_behind_palm_trees.jpg',
+        './img/temple.jpg',
+        './img/garadiya_mahadev_view_point.jpg',
+        './img/garadiya_mahadev_view_point_2.jpg',
+        './img/garadiya_mahadev_view_point_3.jpg',
+        './img/garadiya_mahadev_view_point_4.jpg',
+        './img/sunrise_at_stadium.jpg',
+        './img/sunrise_behind_river.jpg',
+        './img/sunset_behind_palm_trees.jpg',
     ];
 
     const galleryGrid = document.getElementById('gallery-grid');
