@@ -16,7 +16,7 @@ body {
     position: relative;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('img/dark_light_at_stadium.png') center/cover no-repeat fixed;
+                url('img/sunrise_at_stadium.jpg') center/cover no-repeat fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
