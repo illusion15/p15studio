@@ -27,6 +27,7 @@ export function initGallery() {
     });
 }
 
+
 function openFullscreen(element) {
     if (element.requestFullscreen) {
         element.requestFullscreen();
